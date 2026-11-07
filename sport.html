@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusFit - Sports Booking</title>
+
+    <!-- External CSS Linking -->
+    <link rel="stylesheet" href="sport.css">
+</head>
+
+<body>
+
+<header>
+    <h2>CampusFit</h2>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#booking">Book Facility</a>
+        <a href="#equipment">Equipment</a>
+        <a href="#trainers">Trainers</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <h1>Welcome to CampusFit</h1>
+    <p>Your campus sports booking system</p>
+    <button onclick="showMessage()">
+        Get Started
+    </button>
+</section>
+
+<section id="booking" >
+    <h2>Book a Sports Facility</h2>
+
+    <form id="bookingForm">
+        <label>Student Name</label>
+        <input type="text" id="studentName" required>
+
+        <label>Select Facility</label>
+        <select id="facility">
+            <option>Badminton Court</option>
+            <option>Cardio Gym</option>
+            <option>Weight Training</option>
+            <option>TT Room</option>
+            <option>Basketball Court</option>
+        </select>
+
+        <label>Select Date</label>
+        <input type="date" id="date" required>
+
+        <label>Select Time</label>
+        <select id="time">
+            <option>6:00 AM - 6:45 AM</option>
+            <option>6:45 AM - 7:30 AM</option>
+            <option>7:30 AM - 8:15 AM</option>
+            <option>4:00 PM - 4:45 PM</option>
+            <option>4:45 PM - 5:30 PM</option>
+            <option>5:30 PM - 6:15 PM</option>
+        </select>
+
+        <button type="submit">Confirm Booking</button>
+    </form>
+
+    <div id="result"></div>
+   
+</section>
+
+<section id="equipment">
+
+    <div class="section-heading">
+        <p class="eyebrow">BORROW & RETURN</p>
+        <h2>Sports Equipment</h2>
+        <p>Check availability and borrow your favourite sports equipment.</p>
+    </div>
+
+    <div class="equipment-container">
+
+        <!-- Badminton -->
+        <div class="equipment-card">
+            <div class="equipment-icon">🏸</div>
+            <span class="available">Available</span>
+
+            <h3>Badminton Racket</h3>
+            <p>High quality rackets for practice and matches.</p>
+
+            <div class="equipment-info">
+                <span>Available Stock</span>
+                <strong id="racketStock">8</strong>
+            </div>
+
+            <button onclick="borrowEquipment('Badminton Racket')">
+                Borrow Equipment
+            </button>
+        </div>
+
+        <!-- Basketball -->
+        <div class="equipment-card">
+            <div class="equipment-icon">🏀</div>
+            <span class="available">Available</span>
+
+            <h3>Basketball</h3>
+            <p>Basketballs for individual and team practice.</p>
+
+            <div class="equipment-info">
+                <span>Available Stock</span>
+                <strong id="basketStock">5</strong>
+            </div>
+
+            <button onclick="borrowEquipment('Basketball')">
+                Borrow Equipment
+            </button>
+        </div>
+
+        <!-- Table Tennis -->
+        <div class="equipment-card">
+            <div class="equipment-icon">🏓</div>
+            <span class="available">Available</span>
+
+            <h3>Table Tennis Bat</h3>
+            <p>Equipment for table tennis training sessions.</p>
+
+            <div class="equipment-info">
+                <span>Available Stock</span>
+                <strong id="ttStock">10</strong>
+            </div>
+
+            <button onclick="borrowEquipment('TT Bat')">
+                Borrow Equipment
+            </button>
+        </div>
+
+    </div>
+
+    <div class="borrowed-panel">
+        <h2>My Borrowed Equipment</h2>
+        <div id="borrowList">
+            No equipment borrowed yet.
+        </div>
+    </div>
+
+    <div id="equipmentMessage" class="message"></div>
+    
+
+</section>
+
+<section id="trainers">
+
+    <div class="section-heading">
+        <p class="eyebrow">TRAIN WITH EXPERTS</p>
+        <h2>Fitness Trainer Schedule</h2>
+        <p>Explore our trainers and their available timings.</p>
+    </div>
+
+    <div class="trainer-container">
+
+        <!-- Trainer 1 -->
+        <div class="trainer-card">
+
+            <div class="trainer-avatar">AK</div>
+
+            <span class="trainer-status">Available</span>
+
+            <h3>Arjun Kumar</h3>
+            <p class="speciality">Strength Training</p>
+
+            <p>Guidance for weight training,
+            muscle strength and gym exercises.</p>
+
+            <div class="schedule-box">
+                <h4>Training Days</h4>
+                <p>Monday - Wednesday</p>
+
+                <h4>Available Time</h4>
+                <p>7:00 AM - 9:00 AM</p>
+            </div>
+
+        </div>
+
+        <!-- Trainer 2 -->
+        <div class="trainer-card">
+
+            <div class="trainer-avatar avatar2">PS</div>
+
+            <span class="trainer-status">Available</span>
+
+            <h3>Priya Sharma</h3>
+            <p class="speciality">Cardio Fitness</p>
+
+            <p>Personal fitness guidance,
+            cardio exercises and workouts.</p>
+
+            <div class="schedule-box">
+                <h4>Training Days</h4>
+                <p>Tuesday - Thursday</p>
+
+                <h4>Available Time</h4>
+                <p>4:00 PM - 6:00 PM</p>
+            </div>
+
+        </div>
+
+        <!-- Trainer 3 -->
+        <div class="trainer-card">
+
+            <div class="trainer-avatar avatar3">RV</div>
+
+            <span class="trainer-status">Available</span>
+
+            <h3>Rahul Verma</h3>
+            <p class="speciality">Badminton Coaching</p>
+
+            <p>Training for badminton techniques,
+            footwork and match practice.</p>
+
+            <div class="schedule-box">
+                <h4>Training Days</h4>
+                <p>Friday - Saturday</p>
+
+                <h4>Available Time</h4>
+                <p>5:00 PM - 7:00 PM</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>CSE326 Project | CampusFit</p>
+</footer>
+
+<!-- External JavaScript Linking -->
+<script src="sport.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,366 @@
+/* Basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7f4;
+    color: #26332d;
+}
+
+/* Navigation */
+header {
+    background: #173d2b;
+    color: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #a8e6b8;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 160px 40px;
+    background-image:url("https://images.pexels.com/photos/32681170/pexels-photo-32681170/free-photo-of-male-volleyball-player-performing-a-powerful-jump-serve.jpeg?h=1000&w=1500&fit=crop");
+    background-size: cover;
+}
+
+.hero h1 {
+    font-size: 60px;
+    color: #f4fcf8;
+}
+
+.hero p {
+    margin: 15px;
+    color: white;
+}
+
+/* Sections */
+section {
+    padding: 40px 8%;
+}
+
+section h2 {
+    color: #82948a;
+    margin-bottom: 20px;
+}
+
+/* Forms */
+form {
+    background: white;
+    padding: 25px;
+    max-width: 500px;
+    border-radius: 12px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Buttons */
+button {
+    background: #287653;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #174b32;
+}
+
+/* Footer */
+footer {
+    background: #173d2b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
+/* SECTION HEADINGS */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.section-heading p {
+    color: #777;
+}
+
+
+/* SPORTS EQUIPMENT SECTION */
+
+.equipment-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.equipment-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    min-height: 340px;
+    transition: 0.3s;
+}
+
+.equipment-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px #00000015;
+}
+
+.equipment-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.available {
+    display: inline-block;
+    background: #e2f5e8;
+    color: green;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.equipment-card h3 {
+    margin: 18px 0 10px;
+    font-size: 20px;
+}
+
+.equipment-card p {
+    color: #777;
+    font-size: 14px;
+    min-height: 45px;
+}
+
+.equipment-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 12px;
+    background: #f0f6f1;
+    border-radius: 8px;
+}
+
+.equipment-info strong {
+    color: #287653;
+    font-size: 22px;
+}
+
+.equipment-card button {
+    width: 100%;
+    background: #287653;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.equipment-card button:hover {
+    background: #174b32;
+}
+
+
+/* BORROWED EQUIPMENT */
+
+.borrowed-panel {
+    background: white;
+    padding: 25px;
+    margin-top: 35px;
+    border-radius: 12px;
+}
+
+.borrowed-panel h2 {
+    margin-bottom: 20px;
+}
+
+
+/* TRAINER SECTION */
+
+.trainer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.trainer-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    min-height: 390px;
+    transition: 0.3s;
+}
+
+.trainer-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px #00000015;
+}
+
+.trainer-avatar {
+    width: 85px;
+    height: 85px;
+    background: #dcefe2;
+    color: #287653;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 auto 15px;
+}
+
+.avatar2 {
+    background: #ffe9d8;
+    color: #b56a2b;
+}
+
+.avatar3 {
+    background: #e9e2ff;
+    color: #7059ad;
+}
+
+.trainer-status {
+    display: inline-block;
+    background: #e2f5e8;
+    color: green;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.trainer-card h3 {
+    font-size: 21px;
+    margin-top: 15px;
+}
+
+.speciality {
+    color: #287653 !important;
+    font-weight: bold;
+    margin: 5px 0 12px;
+}
+
+.trainer-card > p {
+    color: #777;
+    font-size: 13px;
+}
+
+.schedule-box {
+    background: #f0f6f1;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.schedule-box h4 {
+    color: #287653;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.schedule-box p {
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    .equipment-container,
+    .trainer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .equipment-container,
+    .trainer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .equipment-card,
+    .trainer-card {
+        min-height: auto;
+    }
+
+}
+.message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+
+.success-message {
+    display: block;
+    background: #dff5e5;
+    color: #207542;
+    border: 1px solid #a8dfb8;
+}
+
+.error-message {
+    display: block;
+    background: #ffe5e5;
+    color: #c0392b;
+    border: 1px solid #f2b5b5;
+}
